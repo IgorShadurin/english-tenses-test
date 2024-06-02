@@ -21,6 +21,9 @@
             max-width: none;
             white-space: nowrap;
         }
+        #tenses-table {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -33,9 +36,106 @@
     <div id="options-container" class="d-flex justify-content-between flex-wrap">
         <!-- Options will be generated here -->
     </div>
+    <button class="btn btn-secondary mt-4" onclick="toggleTable()">Show/Hide Tenses Table</button>
+    <div id="tenses-table" class="mt-4">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Tense</th>
+                <th>Positive</th>
+                <th>Negative</th>
+                <th>Question</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Present Simple</td>
+                <td>subject + V/Vs</td>
+                <td>subject + don’t/doesn’t + V</td>
+                <td>Do/Does + subject + V</td>
+            </tr>
+            <tr>
+                <td>Present Continuous</td>
+                <td>am/is/are + Ving</td>
+                <td>am/is/are + not + Ving</td>
+                <td>Am/Is/Are + subject + Ving</td>
+            </tr>
+            <tr>
+                <td>Past Simple</td>
+                <td>subject + Ved/V2</td>
+                <td>subject + did not + V</td>
+                <td>Did + subject + V</td>
+            </tr>
+            <tr>
+                <td>Past Continuous</td>
+                <td>was/were + Ving</td>
+                <td>was/were + not + Ving</td>
+                <td>Was/Were + subject + Ving</td>
+            </tr>
+            <tr>
+                <td>Present Perfect</td>
+                <td>have/has + Ved/V3</td>
+                <td>have/has + not + Ved/V3</td>
+                <td>Have/Has + subject + Ved/V3</td>
+            </tr>
+            <tr>
+                <td>Past Perfect</td>
+                <td>had + Ved/V3</td>
+                <td>had + not + Ved/V3</td>
+                <td>Had + subject + Ved/V3</td>
+            </tr>
+            <tr>
+                <td>Future Simple</td>
+                <td>will + V</td>
+                <td>will not + V</td>
+                <td>Will + subject + V</td>
+            </tr>
+            <tr>
+                <td>Future Continuous</td>
+                <td>will be + Ving</td>
+                <td>will not be + Ving</td>
+                <td>Will + subject + be + Ving</td>
+            </tr>
+            <tr>
+                <td>Future Perfect</td>
+                <td>will have + Ved/V3</td>
+                <td>will not have + Ved/V3</td>
+                <td>Will + subject + have + Ved/V3</td>
+            </tr>
+            <tr>
+                <td>Present Perfect Continuous</td>
+                <td>have/has + been + Ving</td>
+                <td>have/has + not + been + Ving</td>
+                <td>Have/Has + subject + been + Ving</td>
+            </tr>
+            <tr>
+                <td>Past Perfect Continuous</td>
+                <td>had + been + Ving</td>
+                <td>had + not + been + Ving</td>
+                <td>Had + subject + been + Ving</td>
+            </tr>
+            <tr>
+                <td>Future Perfect Continuous</td>
+                <td>will have been + Ving</td>
+                <td>will not have been + Ving</td>
+                <td>Will + subject + have been + Ving</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script>
+    function toggleTable() {
+        const table = document.getElementById('tenses-table')
+        if (table.style.display === 'none' || table.style.display === '') {
+            table.style.display = 'block'
+        } else {
+            table.style.display = 'none'
+        }
+    }
+</script>
 </body>
 </html>
