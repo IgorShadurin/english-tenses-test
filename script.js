@@ -1,16 +1,16 @@
 const tenses = {
     'Present Simple': ['subject + V/Vs', 'subject + don’t/doesn’t + V', 'Do/Does + subject + V'],
-    'Present Continuous': ['am/is/are + Ving', 'am/is/are + not + Ving', 'Am/Is/Are + subject + Ving'],
+    'Present Continuous': ['subject + am/is/are + Ving', 'subject + am/is/are + not + Ving', 'Am/Is/Are + subject + Ving'],
     'Past Simple': ['subject + Ved/V2', 'subject + did not + V', 'Did + subject + V'],
-    'Past Continuous': ['was/were + Ving', 'was/were + not + Ving', 'Was/Were + subject + Ving'],
-    'Present Perfect': ['have/has + Ved/V3', 'have/has + not + Ved/V3', 'Have/Has + subject + Ved/V3'],
-    'Past Perfect': ['had + Ved/V3', 'had + not + Ved/V3', 'Had + subject + Ved/V3'],
-    'Future Simple': ['will + V', 'will not + V', 'Will + subject + V'],
-    'Future Continuous': ['will be + Ving', 'will not be + Ving', 'Will + subject + be + Ving'],
-    'Future Perfect': ['will have + Ved/V3', 'will not have + Ved/V3', 'Will + subject + have + Ved/V3'],
-    'Present Perfect Continuous': ['have/has + been + Ving', 'have/has + not + been + Ving', 'Have/Has + subject + been + Ving'],
-    'Past Perfect Continuous': ['had + been + Ving', 'had + not + been + Ving', 'Had + subject + been + Ving'],
-    'Future Perfect Continuous': ['will have been + Ving', 'will not have been + Ving', 'Will + subject + have been + Ving']
+    'Past Continuous': ['subject + was/were + Ving', 'subject + was/were + not + Ving', 'Was/Were + subject + Ving'],
+    'Present Perfect': ['subject + have/has + Ved/V3', 'subject + have/has + not + Ved/V3', 'Have/Has + subject + Ved/V3'],
+    'Past Perfect': ['subject + had + Ved/V3', 'subject + had + not + Ved/V3', 'Had + subject + Ved/V3'],
+    'Future Simple': ['subject + will + V', 'subject + will not + V', 'Will + subject + V'],
+    'Future Continuous': ['subject + will be + Ving', 'subject + will not be + Ving', 'Will + subject + be + Ving'],
+    'Future Perfect': ['subject + will have + Ved/V3', 'subject + will not have + Ved/V3', 'Will + subject + have + Ved/V3'],
+    'Present Perfect Continuous': ['subject + have/has + been + Ving', 'subject + have/has + not + been + Ving', 'Have/Has + subject + been + Ving'],
+    'Past Perfect Continuous': ['subject + had + been + Ving', 'subject + had + not + been + Ving', 'Had + subject + been + Ving'],
+    'Future Perfect Continuous': ['subject + will have been + Ving', 'subject + will not have been + Ving', 'Will + subject + have been + Ving']
 }
 
 const formulaContainer = document.getElementById('formula-container')
@@ -78,7 +78,6 @@ function addEmoji(emoji, correctTense, correctFormula, chosenTense) {
     emojiSpan.classList.add('emoji')
     emojiSpan.textContent = emoji
     const tooltipContent = `Formula: ${correctFormula}<br>Chosen: ${chosenTense}<br>Correct: ${correctTense}`
-    console.log('tooltipContent', tooltipContent)
     emojiSpan.setAttribute('data-bs-toggle', 'tooltip')
     emojiSpan.setAttribute('data-bs-html', 'true')
     emojiSpan.setAttribute('title', tooltipContent)
