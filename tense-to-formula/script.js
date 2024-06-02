@@ -50,10 +50,10 @@ function getNewQuestion() {
 
 function showQuestion() {
     const { correctTense, correctFormulaIndex, correctFormula } = getNewQuestion()
-    const tenseTypes = ['Positive', 'Negative', 'Question']
+    const tenseTypes = ['+', '-', '?']
     currentTense = correctTense
     currentFormulaType = tenseTypes[correctFormulaIndex]
-    tenseContainer.innerHTML = `<h2 id="tense">${correctTense} (${tenseTypes[correctFormulaIndex]})</h2>`
+    tenseContainer.innerHTML = `<h2 id="tense">(${tenseTypes[correctFormulaIndex]}) ${correctTense}</h2>`
     currentFormula = []
     formulaDisplay.innerHTML = ''
     formulaDisplay.setAttribute('data-correct', correctFormula)
